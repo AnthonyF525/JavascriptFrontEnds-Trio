@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monster Hunt Task Manager - Vanilla JS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Monster Hunt Task Manager</h1>
+            <p>Vanilla JS</p>
+        </header>
+
+        <main>
+            <section class="stats">
+                <div class="stat-card">
+                    <span class="stat-number" id="total-hunts">0</span>
+                    <span class="stat-label">Total Hunts</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number" id="pending-hunts">0</span>
+                    <span class="stat-label">Pending Hunts</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number" id="completed-hunts">0</span>
+                    <span class="stat-label">Completed Hunts</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number" id="total-regions">0</span>
+                    <span class="stat-label">Hunt Locations</span>
+                </div>
+            </section>
+            <section class="actions">
+                <button id="add-hunt-btn" class="btn btn-primary">+ New Hunt</button>
+                <button id="add-region-btn" class="btn btn-secondary">+ new Location</button>
+                <button id="view-regions-btn" class="btn btn-info">View Locations</button>
+            </section>
+            <section class="filters">
+                <div class="filter-group">
+                    <label for="status-filter">Hunt Status:</label>
+                    <select id="status-filter">
+                        <option value="">All Hunts</option>
+                        <option value="pending">Pending Hunts</option>
+                        <option value="completed">Completed Hunts</option>
+                        <option value="in-progress">In Progress</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="region-filter">Location:</label>
+                    <select id="region-filter">
+                        <option value="">All Locations</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="priority-filter">Priority:</label>
+                    <select id="priority-filter">
+                        <option value="">All Priorities</option>
+                        <option value="Fire">High (Fire)</option>
+                        <option value="Thunder">High (Thunder)</option>
+                        <option value="Water">Medium (Water)</option>
+                        <option value="Ice">Low (Ice)</option>
+                        <option value="Dragon">Critical (Dragon)</option>
+                        <option value="None">Normal</option>
+                    </select>
+                </div>
+            </section>
+
+            <section class="hunt-list">
+                <div id="loading" class="loading" style="display: none;">
+                    <div class="spinner"></div>
+                    <p>Loading monster hunts...</p>
+                </div>
+
+                <div id="hunt-container" class="hunt-grid"></div>
+                <div id="error-message" class="error-message" style="display: none;"></div>
+            </section>
+        </main>
+    </div>
+
+    <div id="hunt-form-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close" id="close-hunt-form">&times;</span>
+            <h2 id="hunt-form-title">Add New Hunt</h2>
+            <form id="hunt-form">
+                <div class="form-group">
+                    <label for="monster-name">Monster Name (Task Title):</label>
+                    <input type="text" id="monster-name" name="monsterName" required>
+                    <small>What monster are you hunting?</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="monster-class">Hunt Description:</label>
+                    <input type="text" id="monster-class" name="monsterClass" required>
+                    <small>Describe the hunt details</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="priority">Priority Level:</label>
+                    <select id="priority" name="element" required>
+                        <option value="">Select Priority</option>
+                        <option value="Dragon">Critical (Dragon)</option>
+                        <option value="Fire">High (Fire)</option>
+                        <option value="Thunder">High (Thunder)</option>
+                        <option value="Water">Medium (Water)</option>
+                        <option value="Ice">Low (Ice)</option>
+                        <option value="None">Normal</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="hunt-region">Location:</label>
+                    <select id="hunt-region" name="regionId" required>
+                        <option value="">Select Location</option>
+                    </select>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Create Hunt</button>
+                    <button type="button" id="cancel-hunt" class="btn btn-secondary">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!--Script order matters in Vanilla-->
+    <!-- <script src="utils.js"></script> -->
+    <script src="api.js"></script>
+    <script src="app.js"></script>
+
+</body>
+</html> 

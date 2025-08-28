@@ -1,0 +1,18 @@
+{
+    "sqltools.useNodeRuntime": true,
+    "java.compile.nullAnalysis.mode": "automatic",
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "Monster Hunter DB",
+            "database": "./data/monsterdb.sqlite"
+        },
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "Monster Hunter DB",
+            "database": "monsterdb.sqlite"
+        }
+    ]
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monster Hunter Database</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background: #1a1a1a; color: #fff; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .header { text-align: center; margin-bottom: 30px; }
+        .section { margin: 20px 0; padding: 20px; background: #2a2a2a; border-radius: 8px; }
+        .monster-card { background: #3a3a3a; padding: 15px; margin: 10px; border-radius: 5px; display: inline-block; width: 300px; }
+        .element-fire { border-left: 4px solid #ff4444; }
+        .element-water { border-left: 4px solid #4444ff; }
+        .element-thunder { border-left: 4px solid #ffff44; }
+        .element-ice { border-left: 4px solid #44ffff; }
+        .element-dragon { border-left: 4px solid #8844ff; }
+        .element-none { border-left: 4px solid #888888; }
+        button { background: #ff6600; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; }
+        button:hover { background: #ff8833; }
+        select, input { padding: 8px; margin: 5px; border: none; border-radius: 3px; }
+        #loading { display: none; text-align: center; color: #ff6600; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1> Monster Hunter Database </h1>
+            <p>Explore 1329+ monsters across 66 regions</p>
+        </div>
+
+        <div class="section">
+            <h2> Quick Actions</h2>
+            <button onclick="loadAllMonsters()">Load All Monsters</button>
+            <button onclick="loadAllRegions()">Load Regions</button>
+            <button onclick="showAddForm()">Add New Monster</button>
+            <div id="loading">Loading...</div>
+        </div>
+
+        <div class="section">
+            <h2> Filters</h2>
+            <select id="regionFilter" onchange="filterByRegion()">
+                <option value="">All Regions</option>
+            </select>
+            <select id="elementFilter" onchange="filterByElement()">
+                <option value="">All Elements</option>
+                <option value="Fire">Fire</option>
+                <option value="Water">Water</option>
+                <option value="Thunder">Thunder</option>
+                <option value="Ice">Ice</option>
+                <option value="Dragon">Dragon</option>
+                <option value="None">None</option>
+            </select>
+        </div>
+
+        <div class="section">
+            <h2 id="resultsTitle"> Monsters</h2>
+            <div id="results"></div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
