@@ -215,34 +215,21 @@ src/react/
 - **Ask Questions**: Understand why each framework makes different design choices
 - **Document Learning**: Keep notes on what you discover about each approach
 
-<style>
-  .screenshot {
-    width: 450px;
-    height: 450px;
-    object-fit: cover;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 10px 0;
-  }
-</style>
-
-Three FrontEnd of our Master-detail projects.
-React
-<div class="implementation-section">
-  <h3> React Implementation</h3>
-  <img src="image-2.png" alt="React Monster Hunter Task Manager" class="screenshot">
+<div align="center">
+  <h3>React Implementation</h3>
+  <img src="image-2.png" alt="React Monster Hunter Task Manager" width="450" height="450">
   <p><em>Component-based architecture with hooks and modern React patterns</em></p>
 </div>
 
-<div class="implementation-section">
+<div align="center">
   <h3>Vanilla JavaScript Implementation</h3>
-  <img src="image.png" alt="Vanilla JS Monster Hunter Task Manager" class="screenshot">
+  <img src="image.png" alt="Vanilla JS Monster Hunter Task Manager" width="450" height="450">
   <p><em>Pure JavaScript with DOM manipulation and Fetch API</em></p>
 </div>
 
-<div class="implementation-section">
+<div align="center">
   <h3>Vue.js Implementation</h3>
-  <img src="image-1.png" alt="Vue.js Monster Hunter Task Manager" class="screenshot">
+  <img src="image-1.png" alt="Vue.js Monster Hunter Task Manager" width="450" height="450">
   <p><em>Reactive data binding with declarative templates</em></p>
 </div>
 
