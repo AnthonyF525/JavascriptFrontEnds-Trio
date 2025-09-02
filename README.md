@@ -217,8 +217,12 @@ src/react/
 
 <style>
   .screenshot {
-    max-width: 100%;
-    height: auto;
+    width: 800px;
+    height: 600px;
+    object-fit: cover;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 10px 0;
   }
 </style>
 
