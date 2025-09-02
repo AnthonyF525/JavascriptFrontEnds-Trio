@@ -215,4 +215,20 @@ src/react/
 - **Ask Questions**: Understand why each framework makes different design choices
 - **Document Learning**: Keep notes on what you discover about each approach
 
+<style>
+  .screenshot {
+    max-width: 100%;
+    height: auto;
+  }
+</style>
+
+Three FrontEnd of our Master-detail projects.
+React
+![alt text](image-2.png)
+Vanilla JS
+![alt text](image.png)
+vue.js
+![alt text](image-1.png)
+
+
 Good luck with your implementation! This project will give you hands-on experience with the evolution of JavaScript front-end development.
