@@ -217,8 +217,8 @@ src/react/
 
 <style>
   .screenshot {
-    width: 800px;
-    height: 600px;
+    width: 450px;
+    height: 450px;
     object-fit: cover;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -228,11 +228,23 @@ src/react/
 
 Three FrontEnd of our Master-detail projects.
 React
-![alt text](image-2.png)
-Vanilla JS
-![alt text](image.png)
-vue.js
-![alt text](image-1.png)
+<div class="implementation-section">
+  <h3> React Implementation</h3>
+  <img src="image-2.png" alt="React Monster Hunter Task Manager" class="screenshot">
+  <p><em>Component-based architecture with hooks and modern React patterns</em></p>
+</div>
+
+<div class="implementation-section">
+  <h3>Vanilla JavaScript Implementation</h3>
+  <img src="image.png" alt="Vanilla JS Monster Hunter Task Manager" class="screenshot">
+  <p><em>Pure JavaScript with DOM manipulation and Fetch API</em></p>
+</div>
+
+<div class="implementation-section">
+  <h3>Vue.js Implementation</h3>
+  <img src="image-1.png" alt="Vue.js Monster Hunter Task Manager" class="screenshot">
+  <p><em>Reactive data binding with declarative templates</em></p>
+</div>
 
 
 Good luck with your implementation! This project will give you hands-on experience with the evolution of JavaScript front-end development.
